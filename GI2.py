@@ -195,8 +195,8 @@ bus_window.geometry(str(f"{ws//3}x{hs}+{ws//3}+0"))  # Set window size to one-th
 
 
 # Sample trains and buses: mix of text and image paths
-trains = rt.request_trains(rt.lausanne_request())
-buses = rt.request_buses(rt.georgette_request())
+trains = rt.request_trains(rt.trainstation_request())
+buses = rt.request_buses(rt.busstop_request())
 
 # Create grids
 create_train_grid(root, trains)
