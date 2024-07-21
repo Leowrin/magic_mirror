@@ -22,8 +22,8 @@ scriptdir = os.path.dirname(__file__)
 # %% 
 def refresh_window():
     # Redraw the windows
-    trains = rt.request_trains(rt.lausanne_request())
-    buses = rt.request_buses(rt.georgette_request())
+    trains = rt.request_trains(rt.trainstation_request())
+    buses = rt.request_buses(rt.busstop_request())
     create_train_grid(root, trains)
     create_bus_grid(bus_window, buses)
     root.update_idletasks()
