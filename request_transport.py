@@ -42,7 +42,7 @@ def trainstation_request() :
     
     now = now.strftime('%Y-%m-%d'+'T'+'%H:%M:%S'+'Z')
     
-    with open(".didok_busstop.txt", "r") as didok_file :
+    with open(".didok_trainstation.txt", "r") as didok_file :
         didok = didok_file.readline()
         
     
@@ -86,7 +86,7 @@ def busstop_request() :
     
     now = now.strftime('%Y-%m-%d'+'T'+'%H:%M:%S'+'Z')
 
-    with open(".didok_trainstation.txt", "r") as didok_file :
+    with open(".didok_busstop.txt", "r") as didok_file :
         didok = didok_file.readline()
 
     xml_request = '''<?xml version="1.0" encoding="UTF-8"?>

@@ -125,14 +125,14 @@ def create_train_grid(root, trains):
                         font = ("Helvetica", 20, "bold")
                         fg_color = "white"
                     else:
-                        font = ("Helvetica", 16)
+                        font = ("Helvetica", 16, "bold")
                         fg_color = "white"
 
                         if item.startswith("IR") or item.startswith("IC"):
                             fg_color = "#EB0000"  
-                            font = ("Helvetica", 18)
+                            font = ("Helvetica", 18, "bold")
                         else:
-                            font = ("Helvetica", 16)
+                            font = ("Helvetica", 16, "bold")
                             fg_color = "white"
 
                     if c == 4 and r != 0:
@@ -163,7 +163,7 @@ def create_bus_grid(window, buses):
         for c, item in enumerate(row):
             
             if isinstance(item, str):
-                font = ("Helvetica", 16)
+                font = ("Helvetica", 16, "bold")
                 fg_color = "#2596be"  # Blue color code for bus text
 
                 label = tk.Label(window, text=item, font=font, fg=fg_color, bg="white", borderwidth=1, relief="solid")
