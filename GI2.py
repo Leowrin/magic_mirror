@@ -163,11 +163,23 @@ def create_bus_grid(window, buses):
         for c, item in enumerate(row):
             
             if isinstance(item, str):
-                font = ("Helvetica", 16, "bold")
-                fg_color = "#2596be"  # Blue color code for bus text
+                
 
-                label = tk.Label(window, text=item, font=font, fg=fg_color, bg="white", borderwidth=1, relief="solid")
-                label.grid(row=r, column=c, sticky="nsew")
+                    
+                    
+                if r !=0 and c == 1 :
+                    font = ("Helvetica", 16, "bold")
+                    fg_color = "#2596be"  # Blue color code for bus text
+    
+                    label = tk.Label(window, text="  "+item, font=font, fg=fg_color, bg="white", borderwidth=1, relief="solid", anchor="w")
+                    label.grid(row=r, column=c, sticky="nsew")
+                else :
+                    font = ("Helvetica", 16, "bold")
+                    fg_color = "#2596be"  # Blue color code for bus text
+
+                    label = tk.Label(window, text=item, font=font, fg=fg_color, bg="white", borderwidth=1, relief="solid")
+                    label.grid(row=r, column=c, sticky="nsew")
+                
 
     # Configure rows and columns to expand
     for r in range(len(buses)):
