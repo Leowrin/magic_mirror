@@ -192,7 +192,8 @@ def create_bus_grid(window, buses):
 
 # Initialize the main window for trains
 root = tk.Tk()
-root.title("Lausanne - Departs")
+root.overrideredirect(1)
+root.title("Railway Station")
 ws = root.winfo_screenwidth()  # width of the screen
 hs = root.winfo_screenheight()  # height of the screen
 
@@ -200,7 +201,7 @@ root.geometry(str(f"{ws//3}x{hs}+0+0"))  # Set window size to one-third of the s
 
 # Initialize the second window for buses
 bus_window = tk.Toplevel(root)
-bus_window.title("Georgette")
+bus_window.title("Buses")
 bus_window.geometry(str(f"{ws//3}x{hs}+{ws//3}+0"))  # Set window size to one-third of the screen width and start from one-third
 
 # Create frames for trains and buses
